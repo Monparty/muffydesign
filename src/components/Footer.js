@@ -8,8 +8,8 @@ export default function Footer() {
         AOS.init();
     }, [])
     return (
-        <footer className="bg-red-100 dark:bg-gray-900">
-            <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:p-10">
+        <footer className="bg-red-200 dark:bg-gray-900">
+            <div className="w-full p-4 py-6 lg:p-10">
                 <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0">
                     <Link data-aos="fade-up" href="/" className="flex items-center">
@@ -18,41 +18,41 @@ export default function Footer() {
                 </div>
                 <div data-aos="fade-up" className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 lg:gap-10">
                     <div>
-                        <h2 className="mb-6 text-sm font-medium text-gray-900 uppercase dark:text-white">บริการของเรา</h2>
+                        <h2 className="mb-6 font-bold text-gray-900 uppercase dark:text-white">บริการของเรา</h2>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             <li className="mb-4">
-                                <Link href="/" className="hover:underline font-light">ตัดผม</Link>
+                                <Link href="/" className="hover:underline">ตัดผม</Link>
                             </li>
                             <li>
-                                <Link href="/" className="hover:underline font-light">ทำเคมี</Link>
+                                <Link href="/" className="hover:underline">ทำเคมี</Link>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 className="mb-6 text-sm font-medium text-gray-900 uppercase dark:text-white">ข่าวสาร</h2>
+                        <h2 className="mb-6 font-bold text-gray-900 uppercase dark:text-white">ข่าวสาร</h2>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             <li className="mb-4">
-                                <Link href="/" className="hover:underline font-light">บริการใหม่</Link>
+                                <Link href="/" className="hover:underline">บริการใหม่</Link>
                             </li>
                             <li>
-                                <Link href="/" className="hover:underline font-light">สินค้าใหม่</Link>
+                                <Link href="/" className="hover:underline">สินค้าใหม่</Link>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 className="mb-6 text-sm font-medium text-gray-900 uppercase dark:text-white">ติดต่อเรา</h2>
+                        <h2 className="mb-6 font-bold text-gray-900 uppercase dark:text-white">ติดต่อเรา</h2>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             <li className="mb-4">
-                                <Link href="#" className="hover:underline font-light">LINE</Link>
+                                <Link href="#" className="hover:underline">LINE</Link>
                             </li>
                             <li>
-                                <Link href="#" className="hover:underline font-light">Facebook</Link>
+                                <Link href="#" className="hover:underline">Facebook</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <hr className="my-8 border-red-200 sm:mx-auto dark:border-gray-700" />
             <div className="sm:flex sm:items-center sm:justify-between">
                 <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <Link href="/" className="hover:underline">MUFFY / design</Link>. All Rights Reserved.
                 </span>

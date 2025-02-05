@@ -1,15 +1,24 @@
 import Image from "next/image"
-import Link from "next/link"
 
-export default function CardDesignProduct({img, title, link}) {
+export default function CardDesignProduct({ title, detail, icon, component }) {
     return (
-        <Link href={link} className='border bg-red-300 rounded-xl'>
-            <div className='zoomImg rounded-t-xl cursor-pointer'>
-                <Image src={img} className='w-48 h-48' alt='menu' />
+        <div className='border rounded-xl p-2 bg-white'>
+            <div className="flex gap-5 p-8">
+                <div className="p-3 rounded-full bg-red-100 h-fit">
+                    {icon}
+                </div>
+                <div className="flex justify-start items-start text-start flex-col gap-2">
+                    <h2 className='text-2xl'>
+                        {title}
+                    </h2>
+                    <p>
+                        {detail}
+                    </p>
+                </div>
             </div>
-            <h2 className='p-2'>
-                {title}
-            </h2>
-        </Link>
+            <div className='rounded-xl border h-[30rem]'>
+                {component}
+            </div>
+        </div>
     )
 }
