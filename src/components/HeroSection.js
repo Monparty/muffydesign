@@ -15,8 +15,8 @@ export default function HeroSection() {
                 <h1 className='text-4xl text-white'>
                     MUFFY / design รับออกแบบกราฟิกและ<br />พัฒนาเว็บไซต์
                 </h1>
-                <p className='text-white'>
-                    ความคิดสร้างสรรค์ การทำงานเป็นทีม หรือการมุ่งเน้นลูกค้าเป็นศูนย์กลาง
+                <p className='text-white text-lg'>
+                    เราคือผู้เชี่ยวชาญด้านการออกแบบกราฟิกและพัฒนาเว็บไซต์ ที่พร้อมช่วยให้ธุรกิจของคุณโดดเด่นเหนือใคร ด้วยดีไซน์ที่สวยงาม ทันสมัย และตอบโจทย์ทุกความต้องการของคุณ
                 </p>
                 <div className='flex gap-5'>
                     <Btn 

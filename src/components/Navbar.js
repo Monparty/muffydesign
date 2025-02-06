@@ -7,16 +7,16 @@ import {
 export default function Navbar() {
     return (
         <nav className='flex w-fit gap-5 m-5 rounded-full bg-white/30 backdrop-blur-md border text-red-600 justify-between items-center py-2 pr-2 pl-2 fixed top-0 z-50'>
-            <Link href="#" className='text-2xl mr-10 flex items-center gap-4'>
-                <Image src={muffyLogo4} className="w-12 p-1 rounded-full bg-white hover:animate-spin" alt="x" />
+            <Link href="#" className='text-3xl mr-10 flex items-center gap-4'>
+                <Image src={muffyLogo4} className="w-12 p-1 rounded-full bg-white" alt="x" />
                 <span >
                     MUFFY / design
                 </span>
             </Link>
-            <div className='flex gap-5 font-bold'>
-                <Link href="#">หน้าแรก</Link>
-                <Link href="#">ออกแบบ</Link>
-                <Link href="#">เว็บไซต์</Link>
+            <div className='flex gap-5 font-bold text-lg'>
+                <Link href="/">หน้าแรก</Link>
+                <Link href="/design">ออกแบบ</Link>
+                <Link href="/web">เว็บไซต์</Link>
                 <Link href="#map">ติดต่อเรา</Link>
             </div>
             <div className='flex gap-5 border-l pl-5'>

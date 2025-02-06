@@ -8,10 +8,10 @@ export default function CardDesignProduct({ title, detail, icon, component }) {
                     {icon}
                 </div>
                 <div className="flex justify-start items-start text-start flex-col gap-2">
-                    <h2 className='text-2xl'>
+                    <h2 className='text-4xl'>
                         {title}
                     </h2>
-                    <p>
+                    <p className="text-lg">
                         {detail}
                     </p>
                 </div>

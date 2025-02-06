@@ -2,11 +2,12 @@ import { Kanit } from "next/font/google";
 import "./globals.css";
 import Navbar from '@/components/Navbar';
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 const kanitFont = Kanit({
   variable: "Kanit",
   subsets: ["latin"],
-  weight: "300"
+  weight: "400"
 });
 
 export const metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

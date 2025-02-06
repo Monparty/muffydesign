@@ -8,7 +8,7 @@ export default function NextSlider({sliderImages}) {
         AOS.init();
     }, [])
     return (
-        <div data-aos="fade-up" className="rounded-md border truncate">
+        <div data-aos="fade-up" className="rounded-xl border truncate">
             <Slider
                 imageList={sliderImages} 
                 width={'100%'} 
