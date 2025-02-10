@@ -12,6 +12,7 @@
     "@madzadev/image-slider": "^2.0.1",
     "aos": "^2.3.4",
     "next": "15.1.6",
+    "nextjs-toploader": "^3.7.15",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5"

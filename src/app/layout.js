@@ -3,6 +3,9 @@ import "./globals.css";
 import Navbar from '@/components/Navbar';
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import NextTopLoader from 'nextjs-toploader';
+
+
 
 const kanitFont = Kanit({
   variable: "Kanit",
@@ -19,6 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${kanitFont.variable} ${kanitFont.variable} antialiased`}>
+        <NextTopLoader color="linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)" />
         <Navbar />
         {children}
         <Footer />

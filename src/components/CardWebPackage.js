@@ -15,12 +15,12 @@ export default function CardWebPackage({img, title, services, link, period, pric
                 <Image src={trophy} alt="x" className="w-20 h-20"></Image>
             </div>
             <div className="grid rounded-t-xl gap-5 justify-center items-center text-center py-10 px-10 bg-red-100">
-                <h2 className="font-bold text-4xl">{title}</h2>
-                <h2 className="font-bold text-5xl">THB {price}</h2>
-                <h2 className="text-xl font-normal">{subTitle}</h2>
+                <h2 className="font-bold text-2xl 2xl:text-4xl">{title}</h2>
+                <h2 className="font-bold text-4xl 2xl:text-5xl">THB {price}</h2>
+                <h2 className="text-lg 2xl:text-xl font-normal">{subTitle}</h2>
                 <div className="flex items-center justify-center gap-2 text-gray-500">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"/><path fill="currentColor" d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2M19 8l.001 12H5V8z"/></svg>
-                    <span className="text-lg">ระยะเวลาในการทำงาน {period} วัน</span>
+                    <span className="text-sm 2xl:text-lg">ระยะเวลาในการทำงาน {period} วัน</span>
                 </div>
             </div>
             <div className="py-10 px-10 rounded-b-xl bg-gray-100">
@@ -28,7 +28,7 @@ export default function CardWebPackage({img, title, services, link, period, pric
                     {services.map((service, index) => (
                         <li className="flex gap-2 justify-center items-center" key={index}>
                             <div className="rounded-full bg-red-500 w-fit">{icon}</div>
-                            <div className="text-xl">{service}</div>
+                            <div className="text-md 2xl:text-xl">{service}</div>
                         </li>
                     ))}
                 </ul>

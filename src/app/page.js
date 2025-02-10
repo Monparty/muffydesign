@@ -34,8 +34,8 @@ export default function Page() {
             <div id="toTop">
                 <HeroSection />
             </div>
-            <div className='px-20'>
-                <section className='flex items-center justify-center gap-10 p-10' id="about">
+            <div className='px-10'>
+                <section className='flex items-center justify-center gap-10 py-10' id="about">
                     <div className='w-1/2 border-r pr-10'>
                         <div className='rounded-xl'>
                             <NextSlider sliderImages={sliderImages} />
@@ -46,7 +46,7 @@ export default function Page() {
                     </div>
                 </section>
                 <h2 className='text-4xl text-center mb-10'>เว็บไซต์ของเรา</h2>
-                <section className='p-10'>
+                <section className='py-10'>
                     <div className='w-full gap-10 grid grid-cols-2 md:grid-cols-4 items-start'>
                         {Object.values(cardNews).map(cardNew => (
                             <CardProduct key={cardNew.id} {...cardNew} />
@@ -63,7 +63,7 @@ export default function Page() {
                         </Link>
                     </div>
                 </section>
-                <section className='p-10 rounded-xl'>
+                <section className='py-10 rounded-xl'>
                     <h2 className='text-4xl mb-10 w-full text-center'>
                         แพ็คเกจเว็บไซต์
                     </h2>
@@ -97,7 +97,7 @@ export default function Page() {
                         </div>
                     </div>
                 </section>
-                <section className='p-10'>
+                <section className='py-10'>
                     <h2 className='text-4xl text-center mb-10'>งานออกแบบของเรา</h2>
                     <div className='p-2 bg-gray-100 rounded-xl grid gap-2'>
                         <div className='grid grid-cols-2 gap-2'>
@@ -117,8 +117,8 @@ export default function Page() {
                         </div>
                     </div>
                 </section>
-                <section className='p-10'>
-                    <div className='grid w-full p-10 gap-10 bg-red-200 rounded-xl'>
+                <section className='py-10'>
+                    <div className='grid w-full p-10 gap-10 bg-gradient-to-t from-red-100 from-10% via-red-300 via-30% to-red-400 to-90% rounded-xl'>
                         <div className='grid grid-cols-2 gap-2 p-2 w-1/3 bg-white rounded-xl'>
                             <div className="zoomImg rounded-xl">
                                 <Image src={p1} className='w-full h-full' alt='menu' />
@@ -135,7 +135,7 @@ export default function Page() {
                         </div>
                     </div>
                 </section>
-                <section className='p-10'>
+                <section className='py-10'>
                     <h2 className='text-4xl text-center mb-10'>คำถามที่พบบ่อย</h2>
                     <div className='flex w-full justify-between items-start gap-5'>
                         <div className='grid gap-5 w-full'>
@@ -168,7 +168,7 @@ export default function Page() {
                         </div>
                     </div>
                 </section>
-                <section className='p-10' id='map'>
+                <section className='py-10' id='contact'>
                     <h2 className='text-4xl text-center mb-10'>ช่องทางการติดต่อ</h2>
                     <div className="w-full flex justify-center gap-10">
                         <CardContact link={'#'} img={qrLine} title={'@Muffy_design'} detail={'Line'} />
