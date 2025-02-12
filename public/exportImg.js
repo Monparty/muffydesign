@@ -29,5 +29,7 @@ import g10 from './g10.gif';
 import g11 from './g11.gif';
 import g12 from './g12.gif';
 import g13 from './g13.gif';
+import g14 from './g14.gif';
+import g15 from './g15.gif';
 
-export { p1, p2, p3, p4, p5, p6, menu, logo, qrLine, webIcon, designIcon, muffyLogo1, muffyLogo2, muffyLogo3, muffyLogo4, trophy, g1, g2, g3, g4, g5, g7, g8, g9,g10, g11, g12, g13 };
+export { p1, p2, p3, p4, p5, p6, menu, logo, qrLine, webIcon, designIcon, muffyLogo1, muffyLogo2, muffyLogo3, muffyLogo4, trophy, g1, g2, g3, g4, g5, g6, g7, g8, g9,g10, g11, g12, g13, g14, g15 };

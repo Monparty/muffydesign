@@ -4,7 +4,7 @@ const icon = <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" view
 
 export default function Breadcrumb({ path2, pathLink2, path3, pathLink3, arrow, active2, active3 }) {
     return (
-        <div className='flex gap-2 items-center text-sm font-light'>
+        <div className='flex gap-2 items-center text-sm font-light 2xl:text-lg'>
             <Link href={'/'} className="hover:opacity-70">หน้าแรก</Link>
             <div>{icon}</div>
             <Link href={pathLink2} className={`${active2 ? 'text-red-600' : ''} hover:opacity-70`}>{path2}</Link>

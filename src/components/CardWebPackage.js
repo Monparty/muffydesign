@@ -7,10 +7,8 @@ export default function CardWebPackage({img, title, services, link, period, pric
     const arr = <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m10 17l5-5m0 0l-5-5"/></svg>
 
     return (
-        <div className="rounded-xl w-full relative">
-            <div className="sticky top-0">
-                <Link href={link} className="rounded-full p-4 bg-red-500 w-fit absolute top-0 right-0 m-4">{arr}</Link>
-            </div>
+        <div className="rounded-xl w-[22rem] lg:w-full relative">
+            <Link href={link} className="rounded-full p-4 bg-red-500 w-fit absolute top-0 right-0 m-4">{arr}</Link>
             <div className={`${img ? 'block' : 'hidden'} w-fit absolute top-0 left-0 m-4 animate-bounce`}>
                 <Image src={trophy} alt="x" className="w-20 h-20"></Image>
             </div>
