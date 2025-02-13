@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import { muffyLogo4 } from '../../public/exportImg';
+import { muffyLogo } from '../../public/exportImg';
 import { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
 import NavbarMobile from "./NavbarMobile";
@@ -41,7 +41,7 @@ export default function Navbar() {
                     </button>
                     <div className="border rounded-full hidden lg:flex gap-5 p-2 w-fit justify-between items-center">
                         <Link href={navLink[0]} className='text-2xl 2xl:text-3xl mr-10 flex items-center gap-4'>
-                            <Image src={muffyLogo4} className="w-12 p-1 rounded-full bg-white" alt="x" />
+                            <Image src={muffyLogo} className="w-12 p-1 rounded-full bg-white" alt="x" />
                             <span>
                                 MUFFY / design
                             </span>

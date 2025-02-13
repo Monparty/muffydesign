@@ -29,7 +29,7 @@ export default function Sidebar({ isOpen, setIsOpen, navLink, navName }) {
 
     return (
         <div className={`flex ${isOpen ? 'w-full' : 'w-0'} transition-all duration-200`}>
-            <div ref={sidebarRef} className={`w-3/5 ${isOpen ? 'opacity-100' : 'opacity-0'} lg:hidden delay-100 flex flex-col h-dvh py-24 px-10 gap-3 bg-white border-r`}>
+            <div ref={sidebarRef} className={`w-3/5 ${isOpen ? 'opacity-100' : 'opacity-0 hidden'} lg:hidden delay-100 flex flex-col h-dvh py-24 px-10 gap-3 bg-white border-r`}>
                 <Link href={navLink[0]} className="border-l pl-2 hover:border-blue-200 py-2 hover:font-medium" onClick={() => setIsOpen(false)}>
                     {navName[0]}
                 </Link>

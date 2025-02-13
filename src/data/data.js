@@ -1,27 +1,34 @@
-import { p1, p2, p3, p4, p5 } from '../../public/exportImg';
+import { 
+    g1, g2, g3, g4, g5, rubber5, logo2, card6, stk9, print20, 
+    logo3, logo4, logo5, stk4,
+    rubber1, rubber2, rubber4, rubber6,
+    card1, card2, card3, card4,
+    stk1, stk2, stk3, stk5, stk6,
+    print3, print4, print5, print21
+ } from '../../public/exportImg';
 
 export const cardNews = [
     {
         id: 1,
-        img: p3,
+        img: g1,
         title: 'Lorem Ipsum คืออะไร?',
         detail: 'Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์',
     },
     {
         id: 2,
-        img: p3,
+        img: g2,
         title: 'ทำไมจึงต้องนำมาใช้?',
         detail: 'เนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ แต่อยู่มาจนถึง',
     },
     {
         id: 3,
-        img: p1,
+        img: g3,
         title: 'มันมีที่มาอย่างไร?',
         detail: 'ยุคที่พลิกโฉมเข้าสู่งานเรียงพิมพ์ด้วยวิธีทางอิเล็กทรอนิกส์ และยังคงสภาพเดิมไว้อย่างไม่มีการเปลี่ยนแปลง มันได้รับความนิยมมากขึ้นในยุค ค.ศ. 1960 เมื่อแผ่น',
     },
     {
         id: 4,
-        img: p2,
+        img: g4,
         title: 'จะนำมาใช้ได้จากที่ไหน?',
         detail: 'Letraset วางจำหน่ายโดยมีข้อความบนนั้นเป็น Lorem Ipsum และล่าสุดกว่านั้น คือเมื่อซอฟท์แวร์การทำสื่อสิ่งพิมพ์ (Desktop Publishing) อย่าง Aldus',
     },
@@ -69,7 +76,7 @@ export const boxColsIcons = [
 export const webPackage = [
     {
         id: 1,
-        img: p2,
+        img: g1,
         title: 'เริ่มต้น',
         subTitle: 'Landing Page สุดปัง',
         detail: 'detail',
@@ -83,7 +90,7 @@ export const webPackage = [
     },
     {
         id: 2,
-        img: p2,
+        img: g2,
         title: 'มาตรฐาน',
         subTitle: 'เว็บไซต์บริหารข้อมูลครบจบ',
         detail: 'detail2',
@@ -97,7 +104,7 @@ export const webPackage = [
     },
     {
         id: 3,
-        img: p2,
+        img: g3,
         title: 'พรีเมียม',
         subTitle: 'เว็บไซต์ครบวงจร',
         detail: 'detail3',
@@ -112,23 +119,13 @@ export const webPackage = [
     },
 ]
 
+// ออกแบบสื่อสิ่งพิมพ์, ออกแบบป้ายสแตนดี้ (Standee), ออกแบบป้ายโรลอัพ (Rollup), ออกแบบป้าย X Stand, ออกแบบป้ายธงญี่ปุ่น J Flag, ออกแบบโปสเตอร์, ออกแบบนามบัตร, ออกแบบตรายาง, ออกแบบ Sticker, ออกแบบป้าย Tag สินค้า, ออกแบบแผ่นพับ, ออกแบบการ์ดงานแต่ง, ออกแบบอื่นๆ
+
 export const designProducts = [
     {
         id: 1,
-        img: p1,
-        imgList: [p1, p2, p3, p4, p5],
-        title: 'ตรายาง',
-        rating: 4,
-        sold: 12,
-        price: '300.00',
-        detail: 'ก่อนเริ่มงานลูกค้าต้องเตรียมข้อมูลดังนี้',
-        detailList: ['ชื่อแบรนด์', 'คำอธิบายสั้นๆ เกี่ยวกับธุรกิจ', 'logo สไตล์ที่ต้องการ', 'สีที่ชอบ โทนสีของโลโกที่ต้องการ', 'ตัวอย่างงานที่ชอบ แนวตัวอย่างงานที่ชอบ', 'ถ้ามีภาพร่างหรือสเกตช์สามารถแนบไฟล์ส่งมาได้เลยครับ'],
-        additional: 'ทำไฟล์พร้อมผลิตและจัดส่งทั่วประเทศ ราคาเริ่มต้น 300 พร้อมทำไฟล์'
-    },
-    {
-        id: 2,
-        img: p2,
-        imgList: [p2, p3],
+        img: logo2,
+        imgList: [logo2, logo3, logo4, logo5, stk4],
         title: 'ออกแบบ Logo',
         rating: 4,
         sold: 50,
@@ -138,9 +135,21 @@ export const designProducts = [
         additional: 'ขั้นตอนการทำงานทั้งหมด 1. ออกแบบให้เลือก 2 แบบ 2. ปรับแก้ไขได้ 3 รอบ 3. ส่งไฟล์งาน 4 ไฟล์ ai, png, pdf, jpg'
     },
     {
+        id: 2,
+        img: rubber5,
+        imgList: [rubber5, rubber1, rubber2, rubber4, rubber6],
+        title: 'ตรายาง',
+        rating: 4,
+        sold: 12,
+        price: '300.00',
+        detail: 'ก่อนเริ่มงานลูกค้าต้องเตรียมข้อมูลดังนี้',
+        detailList: ['ชื่อแบรนด์', 'คำอธิบายสั้นๆ เกี่ยวกับธุรกิจ', 'logo สไตล์ที่ต้องการ', 'สีที่ชอบ โทนสีของโลโกที่ต้องการ', 'ตัวอย่างงานที่ชอบ แนวตัวอย่างงานที่ชอบ', 'ถ้ามีภาพร่างหรือสเกตช์สามารถแนบไฟล์ส่งมาได้เลยครับ'],
+        additional: 'ทำไฟล์พร้อมผลิตและจัดส่งทั่วประเทศ ราคาเริ่มต้น 300 พร้อมทำไฟล์'
+    },
+    {
         id: 3,
-        img: p3,
-        imgList: [p2, p3],
+        img: card6,
+        imgList: [card6, card1, card2, card3, card4],
         title: 'นามบัตร',
         rating: 4,
         sold: 23,
@@ -151,8 +160,8 @@ export const designProducts = [
     },
     {
         id: 4,
-        img: p4,
-        imgList: [p2, p3],
+        img: stk9,
+        imgList: [stk9, stk1, stk2, stk3, stk6],
         title: 'สติ๊กเกอร์',
         rating: 4,
         sold: 10,
@@ -163,8 +172,8 @@ export const designProducts = [
     },
     {
         id: 5,
-        img: p1,
-        imgList: [p2, p3],
+        img: print20,
+        imgList: [print20, print3, print4, print5, print21],
         title: 'สื่อสิ่งพิมพ์',
         rating: 4,
         sold: 15,
@@ -173,5 +182,4 @@ export const designProducts = [
         detailList: ['ชื่อแบรนด์', 'คำอธิบายสั้นๆ เกี่ยวกับธุรกิจ', 'logo สไตล์ที่ต้องการ', 'สีที่ชอบ โทนสีของโลโกที่ต้องการ', 'ตัวอย่างงานที่ชอบ แนวตัวอย่างงานที่ชอบ', 'ถ้ามีภาพร่างหรือสเกตช์สามารถแนบไฟล์ส่งมาได้เลยครับ'],
         additional: 'ขั้นตอนการทำงานทั้งหมด 1. ออกแบบให้เลือก 2 แบบ 2. ปรับแก้ไขได้ 3 รอบ 3. ส่งไฟล์งาน 4 ไฟล์ ai, png, pdf, jpg'
     },
-    // ออกแบบสื่อสิ่งพิมพ์, ออกแบบป้ายสแตนดี้ (Standee), ออกแบบป้ายโรลอัพ (Rollup), ออกแบบป้าย X Stand, ออกแบบป้ายธงญี่ปุ่น J Flag, ออกแบบโปสเตอร์, ออกแบบนามบัตร, ออกแบบตรายาง, ออกแบบ Sticker, ออกแบบป้าย Tag สินค้า, ออกแบบแผ่นพับ, ออกแบบการ์ดงานแต่ง, ออกแบบอื่นๆ
 ]

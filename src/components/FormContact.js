@@ -17,7 +17,7 @@ export default function FormContact() {
             </div>
             <div className='flex flex-col gap-3 w-full'>
                 <label for="f3">บอกสิ่งที่คุณต้องการ</label>
-                <textarea id="f3" placeholder='ตัวอย่าง: ฉันต้องการเริ่มต้นธุรกิจขายอาหารออนไลน์ ฉันอยากได้สติ๊กเกอร์โลโก้ร้านและ เว็บไซต์โปรโมทร้าน' className='border p-2 h-20 text-md 2xl:text-lg rounded-md' />
+                <textarea id="f3" placeholder='ตัวอย่าง: ฉันต้องการเริ่มต้นธุรกิจขายอาหารออนไลน์ ฉันอยากได้สติ๊กเกอร์โลโก้ร้านและ เว็บไซต์โปรโมทร้าน' className='border p-2 h-28 text-md 2xl:text-lg rounded-md' />
             </div>
             <button className='bg-red-600 font-bold text-white text-base w-fit mt-2 px-5 py-2 rounded-full flex gap-2 items-center hover:opacity-90'>
                 Submit

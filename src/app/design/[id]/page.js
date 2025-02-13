@@ -1,20 +1,42 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link";
-import { p1, p2, p3, menu, logo, qrLine, webIcon, designIcon, trophy, g1, g2, g3, g4, g5, g7 } from '../../../../public/exportImg';
+import {
+    card1, card2, card3, card4, card5, card6, card7, logo1, logo2, logo3, logo4, logo5, logo6, print1, print2, print3, print4, print5, print6, print7, print8, print9, print10, print11, print12, print13, print14, print15, print16, print17, print18, print19, print20, print21, print22, rubber1, rubber2, rubber3, rubber4, rubber5, rubber6, rubber7, rubber8, stk1, stk2, stk3, stk4, stk5, stk6, stk7, stk8, stk9, stk10
+} from '../../../../public/exportImg';
 import Breadcrumb from "@/components/Breadcrumb";
 import { useState } from "react";
 import CardProductPage from "@/components/CardProductPage";
 import { designProducts } from '../../../data/data';
 
 export default function Page({ params }) {
-    
     const designProduct = designProducts.find((item) => item.id.toString() === params.id);
+    
+    const [imgSrc, setImgSrc] = useState(designProduct.img)
+    const imageDesignList = [
+        [logo1, logo2, logo3, logo4, logo5, logo6],
+        [rubber1, rubber2, rubber3, rubber4, rubber5, rubber6, rubber7, rubber8],
+        [card1, card2, card3, card4, card5, card6, card7], 
+        [stk1, stk2, stk3, stk4, stk5, stk6, stk7, stk8, stk9, stk10],
+        [print1, print2, print3, print4, print5, print6, print7, print8, print9, print10, print11, print12, print13, print14, print15, print16, print17, print18, print19, print20, print21, print22], 
+    ]
+
+    let imgSet = ''
+    if (designProduct.id === 1) {
+        imgSet = imageDesignList[0]
+    } else if (designProduct.id === 2) {
+        imgSet = imageDesignList[1]
+    } else if (designProduct.id === 3) {
+        imgSet = imageDesignList[2]
+    } else if (designProduct.id === 4) {
+        imgSet = imageDesignList[3]
+    } else if (designProduct.id === 5) {
+        imgSet = imageDesignList[4]
+    }
     if (!designProduct) {
         return <div>Product not found</div>;
     }
-    const [imgSrc, setImgSrc] = useState(p1)
-
+    
     return (
         <div className="px-5 2xl:container 2xl:mx-auto mt-20">
             <div className="py-5">
@@ -33,13 +55,13 @@ export default function Page({ params }) {
                     <Image src={imgSrc} className="w-full h-[30rem] object-cover" alt="x" />
                     <div className="grid grid-cols-5 gap-3 justify-between mt-3">
                         {designProduct.imgList.map((img, index) => (
-                        <Image key={index} src={img} onClick={() => setImgSrc(img)} className="w-full h-28 object-cover cursor-pointer" alt="x" />
+                        <Image key={index} src={img} onClick={() => setImgSrc(img)} className="w-full h-28 object-cover cursor-pointer hover:opacity-70" alt="x" />
                         ))}
                     </div>
                 </div>
                 <div className="w-1/2 grid gap-6 h-fit">
-                    <h2 className="text-2xl">
-                        {designProduct.title}
+                    <h2 className="text-4xl">
+                        {designProduct.title} {designProduct.id}
                     </h2>
                     <h2 className="text-2xl">
                         THB {designProduct.price}
@@ -78,17 +100,29 @@ export default function Page({ params }) {
                     </div>
                 </div>
             </section>
-            <section className="my-24">
-                <h2 className="mb-10 text-4xl">
-                    ตัวอย่างอื่นๆ ที่คุณอาจสนใจ
+            <section className="py-20">
+                <h2 className="mb-10 text-3xl">
+                    รูปภาพเพิ่มเติมของ{designProduct.title}
+                </h2>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3'>
+                    {imgSet.map((img, index) => (
+                        <div className='zoomImg rounded-xl'>
+                            <Image key={index} src={img} alt='x' className='w-full h-80 object-cover'></Image>
+                        </div>
+                    ))}
+                </div>
+            </section>
+            <section className="pb-20">
+                <h2 className="mb-10 text-3xl">
+                    ผลงานอื่นๆ ที่คุณอาจสนใจ
                 </h2>
                 <div className="overflow-x-scroll w-full">
                     <div className="flex gap-3 w-fit">
-                        <CardProductPage id={1} link={'#'} img={p1} title={'test'} price={'1,500'} sold={'22'} />
-                        <CardProductPage id={1} link={'#'} img={p1} title={'test'} price={'1,500'} sold={'22'} />
-                        <CardProductPage id={1} link={'#'} img={p1} title={'test'} price={'1,500'} sold={'22'} />
-                        <CardProductPage id={1} link={'#'} img={p1} title={'test'} price={'1,500'} sold={'22'} />
-                        <CardProductPage id={1} link={'#'} img={p1} title={'test'} price={'1,500'} sold={'22'} />
+                        <CardProductPage id={1} link={'#'} img={rubber1} title={'test'} price={'1,500'} sold={'22'} />
+                        <CardProductPage id={1} link={'#'} img={rubber2} title={'test'} price={'1,500'} sold={'22'} />
+                        <CardProductPage id={1} link={'#'} img={rubber3} title={'test'} price={'1,500'} sold={'22'} />
+                        <CardProductPage id={1} link={'#'} img={rubber4} title={'test'} price={'1,500'} sold={'22'} />
+                        <CardProductPage id={1} link={'#'} img={rubber5} title={'test'} price={'1,500'} sold={'22'} />
                     </div>
                 </div>
             </section>

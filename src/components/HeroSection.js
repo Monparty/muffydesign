@@ -1,24 +1,22 @@
 import Image from "next/image";
-import { p4, p6 } from '../../public/exportImg';
 import Link from "next/link";
 import Btn from "./Btn";
 
-export default function HeroSection() {
+export default function HeroSection({heroImg}) {
     return (
-        <section className='w-full h-auto py-20 md:py-0 md:h-dvh flex bg-gradient-to-r from-red-300 from-10% via-red-400 via-30% to-red-700 to-90%'>
-            <div className='hidden md:w-1/2 2xl:w-3/5 lg:flex justify-center items-center mx-5'>
-                <div className="w-full md:h-[30rem] 2xl:h-[42rem] bg-white rounded-full relative">
-                    <Image className='md:w-full md:h-full 2xl:w-[60rem] 2xl:h-[60rem] object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20' src={p6} alt='p1' />
-                </div>
+        <section className='w-full h-auto md:h-dvh flex justify-center items-center flex-col lg:flex-row bg-gradient-to-r from-red-300 from-10% via-red-400 via-30% to-red-700 to-90%'>
+            <div className="flex justify-center w-full h-fit lg:w-1/2 relative">
+                <Image className='h-[20rem] w-[20rem] md:h-[30rem] md:w-[30rem] lg:h-[40rem] lg:w-[40rem] 2xl:h-[55rem] 2xl:w-[55rem] z-20 object-cover' src={heroImg} alt='p1' />
+                <div className="h-[14rem] w-[14rem] md:h-[20rem] md:w-[20rem] lg:h-[30rem] lg:w-[30rem] 2xl:h-[40rem] 2xl:w-[40rem] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
             </div>
-            <div className='w-full lg:w-1/2 2xl:w-2/5 flex flex-col justify-center items-center md:px-10 2xl:px-20 text-center text-red-500 gap-10'>
-                <h1 className='text-2xl 2xl:text-4xl 2xl:leading-[1.5] text-white '>
-                    MUFFY / design ออกแบบกราฟิก<br  />และพัฒนาเว็บไซต์
+            <div className='w-full lg:w-1/2 flex flex-col justify-center items-center text-center gap-5'>
+                <h1 className='text-2xl 2xl:text-4xl 2xl:leading-[1.5] text-white'>
+                    MUFFY / design ออกแบบกราฟิก<br />และพัฒนาเว็บไซต์
                 </h1>
-                <p className='text-white px-10 md: 2xl:text-lg'>
+                <p className='text-white md: 2xl:text-lg px-20'>
                     เราคือผู้เชี่ยวชาญด้านการออกแบบกราฟิกและพัฒนาเว็บไซต์ ที่พร้อมช่วยให้ธุรกิจของคุณโดดเด่นเหนือใคร ด้วยดีไซน์ที่สวยงาม ทันสมัย และตอบโจทย์ทุกความต้องการของคุณ
                 </p>
-                <div className='flex flex-col md:flex-row gap-5'>
+                <div className='flex flex-wrap justify-center gap-5 text-red-500'>
                     <Btn 
                         icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75c-1.856 0-3.605-.471-5.13-1.3l-4.233.787a.75.75 0 0 1-.874-.874l.788-4.233A10.7 10.7 0 0 1 1.25 12m6-2A.75.75 0 0 1 8 9.25h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75M8 13.25a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5z" clip-rule="evenodd"/></svg>}
                         title={'@Muffy_design'} 
@@ -36,7 +34,7 @@ export default function HeroSection() {
                         link={'#'} 
                     />
                 </div>
-                <div className="w-full flex flex-col justify-center items-center">
+                <div className="w-full flex flex-col justify-center items-center mb-5">
                     <Link href="#" className='border-2 font-bold border-white hover:bg-white text-white hover:text-red-500 px-5 py-2 rounded-full w-44'>
                         <span>
                             See Product
