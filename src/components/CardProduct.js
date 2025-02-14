@@ -2,8 +2,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import AOS from "aos";
+import 'aos/dist/aos.css';
 import React, { useEffect } from "react";
-import '../app/globals.css'
 
 export default function CardProduct({img, title, detail}) {
     useEffect(() => {

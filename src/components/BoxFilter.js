@@ -1,6 +1,10 @@
-export default function BoxFilter({filterDisplay}) {
+export default function BoxFilter({filterDisplay, type, setFilterType, filterType}) {
+    const handleTypeChange = (event) => {
+        setFilterType(event.target.value); 
+    };
+
     return (
-        <div className={`${filterDisplay ? 'block' : 'hidden'} w-80 grid h-fit gap-3 lg:sticky top-3 mb-3`}>
+        <div className={`${filterDisplay ? 'block' : 'hidden'} w-60 2xl:w-80 grid h-fit gap-3 lg:sticky top-3 mb-3`}>
             <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md">
                 <summary className="flex cursor-pointer hover:bg-red-50 items-center py-2 px-2 focus:bg-red-200 rounded-md">
                     ประเภท
@@ -9,15 +13,16 @@ export default function BoxFilter({filterDisplay}) {
                     </div>
                 </summary>
                 <div className="p-4 rounded-md 2xl:text-lg">
-                    <select className="border w-full p-2 rounded-sm font-light text-sm">
-                        <option className="font-light text-sm">-</option>
-                        <option className="font-light text-sm">แมวส้ม</option>
-                        <option className="font-light text-sm">แมวดำ</option>
-                        <option className="font-light text-sm">แมวขาว</option>
+                    <select className="border w-full p-2 rounded-sm font-light text-sm" onChange={handleTypeChange} value={setFilterType}>
+                        <option className="font-light text-sm">{filterType}</option>
+                        <option className="font-light text-sm" value={'-'}> - </option>
+                        {type.map((typeList, index) => (
+                            <option className="font-light text-sm" value={typeList} key={index}>{typeList}</option>
+                        ))}
                     </select>
                 </div>
             </details>
-            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md">
+            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md hidden">
                 <summary className="flex font-light cursor-pointer hover:bg-red-50 items-center py-2 px-2 focus:bg-red-200 rounded-md">
                     ตัวเลือก
                     <div className="ml-auto p-1 rounded-full bg-red-400">
@@ -43,7 +48,7 @@ export default function BoxFilter({filterDisplay}) {
                     </div>
                 </div>
             </details>
-            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md">
+            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md hidden">
                 <summary className="flex font-light cursor-pointer hover:bg-red-50 items-center py-2 px-2 focus:bg-red-200 rounded-md">
                     ขนาด
                     <div className="ml-auto p-1 rounded-full bg-red-400">
@@ -59,7 +64,7 @@ export default function BoxFilter({filterDisplay}) {
                     <button className="active:bg-slate-800 p-2 text-sm active:text-white border-r border-b">XXL</button>
                 </div>
             </details>
-            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md">
+            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md hidden">
                 <summary className="flex font-light cursor-pointer hover:bg-red-50 items-center py-2 px-2 focus:bg-red-200 rounded-md">
                     สี
                     <div className="ml-auto p-1 rounded-full bg-red-400">

@@ -10,8 +10,8 @@ import CardProductPage from "@/components/CardProductPage";
 import { designProducts } from '../../../data/data';
 
 export default function Page({ params }) {
+
     const designProduct = designProducts.find((item) => item.id.toString() === params.id);
-    
     const [imgSrc, setImgSrc] = useState(designProduct.img)
     const imageDesignList = [
         [logo1, logo2, logo3, logo4, logo5, logo6],
@@ -20,6 +20,7 @@ export default function Page({ params }) {
         [stk1, stk2, stk3, stk4, stk5, stk6, stk7, stk8, stk9, stk10],
         [print1, print2, print3, print4, print5, print6, print7, print8, print9, print10, print11, print12, print13, print14, print15, print16, print17, print18, print19, print20, print21, print22], 
     ]
+    const filterProduct = designProducts.filter(product => product.id !== designProduct.id)
 
     let imgSet = ''
     if (designProduct.id === 1) {
@@ -33,6 +34,7 @@ export default function Page({ params }) {
     } else if (designProduct.id === 5) {
         imgSet = imageDesignList[4]
     }
+
     if (!designProduct) {
         return <div>Product not found</div>;
     }
@@ -50,8 +52,8 @@ export default function Page({ params }) {
                     active3={true}
                 />
             </div>
-            <section className="flex gap-10">
-                <div className="w-1/2">
+            <section className="flex flex-col lg:flex-row gap-10">
+                <div className="w-full lg:w-1/2">
                     <Image src={imgSrc} className="w-full h-[30rem] object-cover" alt="x" />
                     <div className="grid grid-cols-5 gap-3 justify-between mt-3">
                         {designProduct.imgList.map((img, index) => (
@@ -59,12 +61,12 @@ export default function Page({ params }) {
                         ))}
                     </div>
                 </div>
-                <div className="w-1/2 grid gap-6 h-fit">
+                <div className="w-full lg:w-1/2 grid gap-6 h-fit">
                     <h2 className="text-4xl">
                         {designProduct.title} {designProduct.id}
                     </h2>
                     <h2 className="text-2xl">
-                        THB {designProduct.price}
+                        THB {designProduct.price} <span className="text-red-500 mr-2">(ราคาเริ่มต้น)</span>
                     </h2>
                     <div>
                         <Link href="#" className='bg-red-600 font-bold text-white p-4 2xl:px-12 2xl:py-4 rounded-full flex gap-2 items-center hover:opacity-90 justify-center'>
@@ -118,11 +120,9 @@ export default function Page({ params }) {
                 </h2>
                 <div className="overflow-x-scroll w-full">
                     <div className="flex gap-3 w-fit">
-                        <CardProductPage id={1} link={'#'} img={rubber1} title={'test'} price={'1,500'} sold={'22'} />
-                        <CardProductPage id={1} link={'#'} img={rubber2} title={'test'} price={'1,500'} sold={'22'} />
-                        <CardProductPage id={1} link={'#'} img={rubber3} title={'test'} price={'1,500'} sold={'22'} />
-                        <CardProductPage id={1} link={'#'} img={rubber4} title={'test'} price={'1,500'} sold={'22'} />
-                        <CardProductPage id={1} link={'#'} img={rubber5} title={'test'} price={'1,500'} sold={'22'} />
+                        {Object.values(filterProduct).map(designProduct => (
+                            <CardProductPage key={designProduct.id} {...designProduct} />
+                        ))}
                     </div>
                 </div>
             </section>

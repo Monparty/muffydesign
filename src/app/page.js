@@ -15,6 +15,7 @@ import FormContact from "@/components/FormContact";
 import MarqueeGallery from "@/components/MarqueeGallery";
 import AboutSection from "@/components/AboutSection";
 import CardContact from "@/components/CardContact";
+import '@/app/globals.css'
 
 export default function Page() {
     const sliderImages = [

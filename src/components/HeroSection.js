@@ -1,15 +1,22 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import Btn from "./Btn";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 export default function HeroSection({heroImg}) {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <section className='w-full h-auto md:h-dvh flex justify-center items-center flex-col lg:flex-row bg-gradient-to-r from-red-300 from-10% via-red-400 via-30% to-red-700 to-90%'>
-            <div className="flex justify-center w-full h-fit lg:w-1/2 relative">
+            <div data-aos="fade-down" className="flex justify-center w-full h-fit lg:w-1/2 relative">
                 <Image className='h-[20rem] w-[20rem] md:h-[30rem] md:w-[30rem] lg:h-[40rem] lg:w-[40rem] 2xl:h-[55rem] 2xl:w-[55rem] z-20 object-cover' src={heroImg} alt='p1' />
                 <div className="h-[14rem] w-[14rem] md:h-[20rem] md:w-[20rem] lg:h-[30rem] lg:w-[30rem] 2xl:h-[40rem] 2xl:w-[40rem] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
             </div>
-            <div className='w-full lg:w-1/2 flex flex-col justify-center items-center text-center gap-5'>
+            <div data-aos="fade-up" className='w-full lg:w-1/2 flex flex-col justify-center items-center text-center gap-5'>
                 <h1 className='text-2xl 2xl:text-4xl 2xl:leading-[1.5] text-white'>
                     MUFFY / design ออกแบบกราฟิก<br />และพัฒนาเว็บไซต์
                 </h1>
@@ -26,7 +33,7 @@ export default function HeroSection({heroImg}) {
                     <Btn 
                         icon={<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 2A2.25 2.25 0 0 1 18 4.25v15.5A2.25 2.25 0 0 1 15.75 22h-7.5A2.25 2.25 0 0 1 6 19.75V4.25A2.25 2.25 0 0 1 8.25 2zm-2.5 16h-2.5a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5"/></svg>}
                         title={'094-303-0401'} 
-                        link={'#'} 
+                        link={'tel:0943030401'} 
                     />
                     <Btn 
                         icon={<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>}

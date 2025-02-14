@@ -14,6 +14,8 @@ export default function Page() {
     const filter = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#000" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z"/></svg>
     const arr = <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m10 17l5-5m0 0l-5-5"/></svg>
     const [filterDisplay, setFilterDisplay] = useState(false)
+    const [filterType, setFilterType] = useState('-')
+    const filterProductType = designProducts.map(product => product.title)
 
     return (
         <div className='px-5 2xl:container 2xl:mx-auto'>
@@ -47,10 +49,12 @@ export default function Page() {
                 </h2>
             </div>
             <section className='flex flex-col lg:flex-row items-center lg:items-start gap-3 w-full h-full'>
-                <BoxFilter filterDisplay={filterDisplay} />
+                <BoxFilter filterDisplay={filterDisplay} type={filterProductType} filterType={filterType} setFilterType={setFilterType} />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3">
                     {Object.values(designProducts).map(designProduct => (
-                        <CardProductPage key={designProduct.id} {...designProduct} filterDisplay={filterDisplay} />
+                        <div className={`${filterType === designProduct.title || filterType === '-' ? '' : 'hidden'}`}>
+                            <CardProductPage key={designProduct.id} {...designProduct} filterDisplay={filterDisplay} filterType={filterType} setFilterType={setFilterType} />
+                        </div>
                     ))}
                 </div>
             </section>
