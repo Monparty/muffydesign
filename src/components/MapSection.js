@@ -1,11 +1,4 @@
-"use client"
-import AOS from 'aos';
-import { useEffect } from 'react';
-
 export default function MapSection() {
-    useEffect(() => {
-    AOS.init();
-  }, [])
     return (
         <section>
             <iframe
@@ -14,7 +7,7 @@ export default function MapSection() {
                 tabindex="0"
                 loading="lazy"
                 className="w-full rounded-xl h-60 md:h-[580px]"
-                data-aos="fade-up"
+               
             />
         </section>
     )

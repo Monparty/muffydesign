@@ -1,16 +1,9 @@
-"use client"
 import Link from "next/link"
 import Image from "next/image"
-import AOS from "aos";
-import 'aos/dist/aos.css';
-import React, { useEffect } from "react";
 
 export default function CardProduct({img, title, detail}) {
-    useEffect(() => {
-        AOS.init();
-    }, [])
     return (
-        <div data-aos="fade-up" className="w-full grid gap-4 2xl:text-xl">
+        <div className="w-full grid gap-4 2xl:text-xl">
             <div className="zoomImg rounded-xl">
                 <Image src={img} alt="x" className="w-full h-60 object-cover" />
             </div>

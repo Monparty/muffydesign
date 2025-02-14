@@ -88,7 +88,7 @@ export default function Page({ params }) {
                         </div>
                     </div>
                     <div>
-                        <details data-aos="fade-up" className="mb-2">
+                        <details className="mb-2">
                             <summary className="flex 2xl:text-xl font-light py-3 cursor-pointer items-center border-b">
                                 ข้อมูลเพิ่มเติม
                                 <div className="ml-auto p-1 rounded-full bg-red-400">

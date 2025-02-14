@@ -7,7 +7,7 @@ export default function CardProductPage({ id, img, title, price, sold, filterDis
     return (
         <Link href={`/design/${id}`} className={`${filterDisplay ? 'w-72 2xl:w-72' : 'w-96 2xl:w-[22rem]'}`}>
             <div className="zoomImg rounded-md">
-                <Image src={img} className={`${filterDisplay ? 'w-72 2xl:w-72 h-72' : 'w-96 2xl:w-[22rem] h-96'}  object-cover`} alt="x" />
+                <Image src={img} className={`w-full ${filterDisplay ? 'h-72' : 'h-96'} object-cover`} alt="x" />
             </div>
             <div className="flex flex-col mt-2 mb-10">
                 <h2 className="text-lg">

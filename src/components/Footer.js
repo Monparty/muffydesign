@@ -1,22 +1,16 @@
-"use client"
-import AOS from "aos";
 import Link from "next/link"
-import React, { useEffect } from "react";
 
 export default function Footer() {
-    useEffect(() => {
-        AOS.init();
-    }, [])
     return (
         <footer className="border-t dark:bg-gray-900">
             <div className="w-full p-4 py-6 lg:p-10">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <Link data-aos="fade-up" href="#toTop" className="flex items-center">
+                        <Link href="#toTop" className="flex items-center">
                             <span className="self-center text-4xl whitespace-nowrap dark:text-white">MUFFY / design</span>
                         </Link>
                     </div>
-                    <div data-aos="fade-up" className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 lg:gap-10">
+                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 lg:gap-10">
                         <div>
                             <h2 className="mb-6 font-bold text-gray-900 uppercase dark:text-white">บริการของเรา</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">

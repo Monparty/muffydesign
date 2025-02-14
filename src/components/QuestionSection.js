@@ -1,13 +1,6 @@
-"use client"
-import AOS from "aos";
-import { useEffect } from "react";
-
 export default function QuestionSection({question, answer}) {
-  useEffect(() => {
-      AOS.init();
-  }, [])
   return (
-    <details data-aos="fade-up" className="border border-red-200 rounded-md">
+    <details className="border border-red-200 rounded-md">
       <summary className="flex 2xl:text-xl font-light py-4 cursor-pointer hover:bg-red-50 items-center px-4 focus:bg-red-200 rounded-md">
         {question}
         <div className="ml-auto p-1 rounded-full bg-red-400">

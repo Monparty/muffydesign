@@ -3,6 +3,9 @@ import { useState } from 'react';
 import {
     heroDesignImg, card1, card2, card3, card4, card5, card6, card7, logo1, logo2, logo3, logo4, logo5, logo6, print1, print2, print3, print4, print5, print6, print7, print8, print9, print10, print11, print12, print13, print14, print15, print16, print17, print18, print19, print20, print21, print22, rubber1, rubber2, rubber3, rubber4, rubber5, rubber6, rubber7, rubber8, stk1, stk2, stk3, stk4, stk5, stk6, stk7, stk8, stk9, stk10
 } from '../../../public/exportImg';
+import 'aos/dist/aos.css';
+import AOS from "aos";
+import { useEffect } from "react";
 import { designProducts } from '../../data/data';
 import BoxFilter from '@/components/BoxFilter';
 import CardProductPage from '@/components/CardProductPage';
@@ -17,18 +20,22 @@ export default function Page() {
     const [filterType, setFilterType] = useState('-')
     const filterProductType = designProducts.map(product => product.title)
 
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
         <div className='px-5 2xl:container 2xl:mx-auto'>
             <div className='flex flex-col lg:flex-row justify-center items-center gap-10 bg-gradient-to-r from-red-300 from-10% via-red-400 via-30% to-red-700 to-90% h-full p-5 w-full rounded-b-xl'>
-                <div className='hidden lg:flex justify-end w-1/2'>
-                    <Image src={heroDesignImg} className='w-4/5 h-4/5' alt=''></Image>
+                <div className='hidden lg:flex justify-end w-1/2' data-aos="fade-down">
+                    <Image src={heroDesignImg} className='w-4/5 h-4/5' alt='x'></Image>
                 </div>
-                <div className='text-white flex flex-col gap-4 justify-start w-full lg:w-1/2 pr-20'>
+                <div className='text-white flex flex-col gap-4 justify-start w-full lg:w-1/2' data-aos="fade-down">
                     <h1 className="text-2xl lg:text-6xl">
                         งานออกแบบกราฟิก
                     </h1>
-                    <p className='text-lg lg:text-2xl font-light'>
-                        ไม่มีสิ่งใดที่สำคัญกว่าการสร้างผลงานที่ตรงกับแนวคิด<br />และความต้องการของลูกค้า เราเข้าใจว่าการออกแบบต้องถูกใจลูกค้า
+                    <p className='text-lg lg:text-2xl font-light 2xl:pr-20'>
+                        ไม่มีสิ่งใดที่สำคัญกว่าการสร้างผลงานที่ตรงกับแนวคิด และความต้องการของลูกค้า เราเข้าใจว่าการออกแบบต้องถูกใจลูกค้า
                     </p>
                 </div>
             </div>
@@ -50,7 +57,7 @@ export default function Page() {
             </div>
             <section className='flex flex-col lg:flex-row items-center lg:items-start gap-3 w-full h-full'>
                 <BoxFilter filterDisplay={filterDisplay} type={filterProductType} filterType={filterType} setFilterType={setFilterType} />
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3 w-full">
                     {Object.values(designProducts).map(designProduct => (
                         <div className={`${filterType === designProduct.title || filterType === '-' ? '' : 'hidden'}`}>
                             <CardProductPage key={designProduct.id} {...designProduct} filterDisplay={filterDisplay} filterType={filterType} setFilterType={setFilterType} />
@@ -59,10 +66,12 @@ export default function Page() {
                 </div>
             </section>
             <section className='py-10'>
-                <h2 className='text-4xl text-center mb-10'>ภาพตัวอย่างงานออกแบบ</h2>
+                <h2 className='text-4xl text-center mb-10' data-aos="fade-up">
+                    ภาพตัวอย่างงานออกแบบ
+                </h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3'>
                     {imageDesignList.map((img, index) => (
-                        <div className='zoomImg rounded-xl'>
+                        <div className='zoomImg rounded-xl' data-aos="fade-up">
                             <Image key={index} src={img} alt='' className='w-full h-80 object-cover'></Image>
                         </div>
                     ))}

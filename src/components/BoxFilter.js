@@ -5,7 +5,7 @@ export default function BoxFilter({filterDisplay, type, setFilterType, filterTyp
 
     return (
         <div className={`${filterDisplay ? 'block' : 'hidden'} w-60 2xl:w-80 grid h-fit gap-3 lg:sticky top-3 mb-3`}>
-            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md">
+            <details className="bg-white border border-red-200 rounded-md">
                 <summary className="flex cursor-pointer hover:bg-red-50 items-center py-2 px-2 focus:bg-red-200 rounded-md">
                     ประเภท
                     <div className="ml-auto p-1 rounded-full bg-red-400">
@@ -22,7 +22,7 @@ export default function BoxFilter({filterDisplay, type, setFilterType, filterTyp
                     </select>
                 </div>
             </details>
-            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md hidden">
+            <details className="bg-white border border-red-200 rounded-md hidden">
                 <summary className="flex font-light cursor-pointer hover:bg-red-50 items-center py-2 px-2 focus:bg-red-200 rounded-md">
                     ตัวเลือก
                     <div className="ml-auto p-1 rounded-full bg-red-400">
@@ -48,7 +48,7 @@ export default function BoxFilter({filterDisplay, type, setFilterType, filterTyp
                     </div>
                 </div>
             </details>
-            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md hidden">
+            <details className="bg-white border border-red-200 rounded-md hidden">
                 <summary className="flex font-light cursor-pointer hover:bg-red-50 items-center py-2 px-2 focus:bg-red-200 rounded-md">
                     ขนาด
                     <div className="ml-auto p-1 rounded-full bg-red-400">
@@ -64,7 +64,7 @@ export default function BoxFilter({filterDisplay, type, setFilterType, filterTyp
                     <button className="active:bg-slate-800 p-2 text-sm active:text-white border-r border-b">XXL</button>
                 </div>
             </details>
-            <details data-aos="fade-up" className="bg-white border border-red-200 rounded-md hidden">
+            <details className="bg-white border border-red-200 rounded-md hidden">
                 <summary className="flex font-light cursor-pointer hover:bg-red-50 items-center py-2 px-2 focus:bg-red-200 rounded-md">
                     สี
                     <div className="ml-auto p-1 rounded-full bg-red-400">
