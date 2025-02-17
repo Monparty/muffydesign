@@ -10,7 +10,7 @@ export default function Footer() {
                             <span className="self-center text-4xl whitespace-nowrap dark:text-white">MUFFY / design</span>
                         </Link>
                     </div>
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 lg:gap-10">
+                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 lg:gap-14">
                         <div>
                             <h2 className="mb-6 font-bold text-gray-900 uppercase dark:text-white">บริการของเรา</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -37,13 +37,10 @@ export default function Footer() {
                             <h2 className="mb-6 font-bold text-gray-900 uppercase dark:text-white">ติดต่อเรา</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <Link href="#" className="hover:underline">LINE</Link>
+                                    <Link href="https://line.me/ti/p/%40388rnahg" target="_blank" className="hover:underline">LINE</Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:underline">Facebook</Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="hover:underline">094-303-0401</Link>
+                                    <Link href="https://web.facebook.com/profile.php?id=61555308387991" target="_blank" className="hover:underline">Facebook</Link>
                                 </li>
                             </ul>
                         </div>

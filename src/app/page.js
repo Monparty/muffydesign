@@ -1,6 +1,6 @@
 "use client"
 import "@madzadev/image-slider/dist/index.css";
-import { qrLine, heroImg, g1, g2, g3, g4, g5, print21, print5, print3, rubber2, print14, stk6, stk10, logo2, print11, rubber6, print20 } from '../../public/exportImg';
+import { qrPhone, qrFacebook, qrLine, heroImg, g1, g2, g3, g4, print21, print5, print3, rubber2, print14, stk6, stk10, logo2, print11, rubber6, print20 } from '../../public/exportImg';
 import { cardNews, webPackage } from '../data/data';
 import 'aos/dist/aos.css';
 import AOS from "aos";
@@ -49,12 +49,10 @@ export default function Page() {
     return (
         <div>
             <section id="toTop" className='bg-gradient-to-r from-red-300 from-10% via-red-400 via-30% to-red-700 to-90%'>
-                <div data-aos="fade-down">
-                    <HeroSection heroImg={heroImg} />
-                </div>
+                <HeroSection heroImg={heroImg} />
             </section>
             <div className='px-5 2xl:container 2xl:mx-auto'>
-                <section className='flex flex-col md:flex-row items-center justify-center gap-10 py-10' id="about">
+                <section className='flex flex-col-reverse md:flex-row items-center justify-center gap-10 py-10' id="about">
                     <div className='w-full md:w-1/2 md:border-r md:pr-10' data-aos="fade-up">
                         <div className='rounded-xl'>
                             <NextSlider sliderImages={sliderImages} />
@@ -71,13 +69,13 @@ export default function Page() {
                     <h2 className='text-4xl text-center mb-10' data-aos="fade-up">
                         เว็บไซต์ของเรา
                     </h2>
-                    <div className='w-full gap-10 grid grid-cols-2 md:grid-cols-4 items-start' data-aos="fade-up">
+                    <div className='w-full gap-10 grid grid-cols-1 md:grid-cols-4 items-start' data-aos="fade-up">
                         {Object.values(cardNews).map(cardNew => (
                             <CardProduct key={cardNew.id} {...cardNew} />
                         ))}
                     </div>
                     <div className="grid mt-10 justify-center w-full">
-                        <Link href="#" className='w-fit border-2 font-bold border-red-600 hover:bg-red-100 text-red-600 p-2 pr-6 rounded-full flex justify-between gap-2 items-center'>
+                        <Link href="/web" className='w-fit border-2 font-bold border-red-600 hover:bg-red-100 text-red-600 p-2 pr-6 rounded-full flex justify-between gap-2 items-center'>
                             <div className="bg-gray-200 p-2 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><defs><mask id="ipSWebPage0"><g fill="none"><rect width="40" height="32" x="4" y="8" stroke="#fff" stroke-linejoin="round" stroke-width="4" rx="3"/><path fill="#fff" stroke="#fff" stroke-width="4" d="M4 11a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v9H4z"/><circle r="2" fill="#000" transform="matrix(0 -1 -1 0 10 14)"/><circle r="2" fill="#000" transform="matrix(0 -1 -1 0 16 14)"/></g></mask></defs><path fill="#dc2626" d="M0 0h48v48H0z" mask="url(#ipSWebPage0)"/></svg>
                             </div>
@@ -141,7 +139,7 @@ export default function Page() {
                             />
                         </div>
                         <div className="grid my-10 justify-center w-full">
-                            <Link href="#" className='bg-red-600 font-bold text-white p-2 pr-6 rounded-full flex gap-2 items-center hover:opacity-90'>
+                            <Link href="/design" className='bg-red-600 font-bold text-white p-2 pr-6 rounded-full flex gap-2 items-center hover:opacity-90'>
                                 <div className="bg-red-400 p-2 rounded-full">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#fff" d="M3 17.25V21h3.75L17.81 9.93l-3.75-3.75zm19.61 1.11l-4.25 4.25l-5.2-5.2l1.77-1.77l1 1l2.47-2.48l1.42 1.42L18.36 17l1.06 1l1.42-1.4zm-16-7.53L1.39 5.64l4.25-4.25L7.4 3.16L4.93 5.64L6 6.7l2.46-2.48l1.42 1.42l-1.42 1.41l1 1zM20.71 7c.39-.39.39-1 0-1.41l-2.34-2.3c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75z"/></svg>
                                 </div>
@@ -211,9 +209,9 @@ export default function Page() {
                         ช่องทางการติดต่อ
                     </h2>
                     <div className="w-full flex flex-col md:flex-row justify-center items-center gap-10" data-aos="fade-up">
-                        <CardContact link={'#'} img={qrLine} title={'@Muffy_design'} detail={'Line'} />
-                        <CardContact link={'#'} img={qrLine} title={'094-303-0401'} detail={'Phone'} />
-                        <CardContact link={'#'} img={qrLine} title={'Muffy design'} detail={'Facebook'} />
+                        <CardContact link={'https://line.me/ti/p/%40388rnahg'} img={qrLine} title={'@Muffy_design'} detail={'Line'} />
+                        <CardContact link={'tel:0943030401'} img={qrPhone} title={'094-303-0401'} detail={'Phone'} />
+                        <CardContact link={'https://web.facebook.com/profile.php?id=61555308387991'} img={qrFacebook} title={'Muffy design'} detail={'Facebook'} />
                     </div>
                 </section>
                 <section className='w-full flex-col md:flex-row h-full py-10 flex gap-10 justify-between'>

@@ -2,6 +2,8 @@
 
 import trophy from './trophy.png';
 import qrLine from './qrLine.png';
+import qrFacebook from './qrFacebook.png';
+import qrPhone from './qrPhone.png';
 import muffyLogo from './muffyLogo.png';
 import heroImg from './heroImg.png';
 import heroDesignImg from './heroDesignImg.png';
@@ -89,6 +91,8 @@ import stk10 from './stk10.jpg';
 export {
     trophy,
     qrLine,
+    qrFacebook,
+    qrPhone,
     muffyLogo,
     heroImg,
     heroDesignImg,

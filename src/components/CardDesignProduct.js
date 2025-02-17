@@ -1,10 +1,8 @@
-import Image from "next/image"
-
 export default function CardDesignProduct({ title, detail, icon, component }) {
     return (
         <div className='border rounded-xl p-2 bg-white'>
-            <div className="flex gap-5 p-8">
-                <div className="p-3 rounded-full bg-red-100 h-fit">
+            <div className="grid lg:flex gap-5 p-8">
+                <div className="p-3 rounded-full bg-red-100 h-fit w-fit">
                     {icon}
                 </div>
                 <div className="flex justify-start items-start text-start flex-col gap-2">

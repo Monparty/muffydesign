@@ -63,7 +63,7 @@ export default function Page({ params }) {
                 </div>
                 <div className="w-full lg:w-1/2 grid gap-6 h-fit">
                     <h2 className="text-4xl">
-                        {designProduct.title} {designProduct.id}
+                        {designProduct.title}
                     </h2>
                     <h2 className="text-2xl">
                         THB {designProduct.price} <span className="text-red-500 mr-2">(ราคาเริ่มต้น)</span>
