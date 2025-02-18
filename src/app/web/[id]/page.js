@@ -1,39 +1,16 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link";
-import {
-    card1, card2, card3, card4, card5, card6, card7, logo1, logo2, logo3, logo4, logo5, logo6, print1, print2, print3, print4, print5, print6, print7, print8, print9, print10, print11, print12, print13, print14, print15, print16, print17, print18, print19, print20, print21, print22, rubber1, rubber2, rubber3, rubber4, rubber5, rubber6, rubber7, rubber8, stk1, stk2, stk3, stk4, stk5, stk6, stk7, stk8, stk9, stk10
-} from '../../../../public/exportImg';
 import Breadcrumb from "@/components/Breadcrumb";
 import { useState } from "react";
 import CardProductPage from "@/components/CardProductPage";
-import { designProducts } from '../../../data/data';
+import { webProducts } from '../../../data/data';
 
 export default function Page({ params }) {
 
-    const product = designProducts.find((item) => item.id.toString() === params.id);
+    const product = webProducts.find((item) => item.id.toString() === params.id);
     const [imgSrc, setImgSrc] = useState(product.img)
-    const imageDesignList = [
-        [logo1, logo2, logo3, logo4, logo5, logo6],
-        [rubber1, rubber2, rubber3, rubber4, rubber5, rubber6, rubber7, rubber8],
-        [card1, card2, card3, card4, card5, card6, card7], 
-        [stk1, stk2, stk3, stk4, stk5, stk6, stk7, stk8, stk9, stk10],
-        [print1, print2, print3, print4, print5, print6, print7, print8, print9, print10, print11, print12, print13, print14, print15, print16, print17, print18, print19, print20, print21, print22], 
-    ]
-    const filterProduct = designProducts.filter(item => item.id !== product.id)
-
-    let imgSet = ''
-    if (product.id === 1) {
-        imgSet = imageDesignList[0]
-    } else if (product.id === 2) {
-        imgSet = imageDesignList[1]
-    } else if (product.id === 3) {
-        imgSet = imageDesignList[2]
-    } else if (product.id === 4) {
-        imgSet = imageDesignList[3]
-    } else if (product.id === 5) {
-        imgSet = imageDesignList[4]
-    }
+    const filterProduct = webProducts.filter(item => item.id !== product.id)    
 
     if (!product) {
         return <div>Product not found</div>;
@@ -44,8 +21,8 @@ export default function Page({ params }) {
             <div className="py-5">
                 <Breadcrumb
                     path2={"ออกแบบ"}
-                    pathLink2={"/design"}
-                    path3={"ผลงานการออกแบบ"}
+                    pathLink2={"/web"}
+                    path3={"รายละเอียดแพ็คเกจ"}
                     pathLink3={""}
                     arrow={true}
                     active2={false}
@@ -57,7 +34,7 @@ export default function Page({ params }) {
                     <Image src={imgSrc} className="w-full h-[30rem] object-cover" alt="x" />
                     <div className="grid grid-cols-5 gap-3 justify-between mt-3">
                         {product.imgList.map((img, index) => (
-                        <Image key={index} src={img} onClick={() => setImgSrc(img)} className="w-full h-28 object-cover cursor-pointer hover:opacity-70" alt="x" />
+                        <Image key={index} src={img} onClick={() => setImgSrc(img)} className="w-full h-28 object-contain cursor-pointer hover:opacity-70" alt="x" />
                         ))}
                     </div>
                 </div>
@@ -100,18 +77,6 @@ export default function Page({ params }) {
                             </div>
                         </details>
                     </div>
-                </div>
-            </section>
-            <section className="py-20">
-                <h2 className="mb-10 text-3xl">
-                    รูปภาพเพิ่มเติมของ{product.title}
-                </h2>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3'>
-                    {imgSet.map((img, index) => (
-                        <div className='zoomImg rounded-xl'>
-                            <Image key={index} src={img} alt='x' className='w-full h-80 object-cover'></Image>
-                        </div>
-                    ))}
                 </div>
             </section>
             <section className="pb-20">

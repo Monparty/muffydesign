@@ -7,6 +7,8 @@ import qrPhone from './qrPhone.png';
 import muffyLogo from './muffyLogo.png';
 import heroImg from './heroImg.png';
 import heroDesignImg from './heroDesignImg.png';
+import heroWeb from './heroWeb.png';
+
 
 // web
 
@@ -27,6 +29,34 @@ import g14 from './g14.gif';
 import g15 from './g15.gif';
 
 import web1 from './web1.jpg';
+
+import w_moncook1 from './w_moncook1.png';
+import w_moncook2 from './w_moncook2.png';
+import w_moncook3 from './w_moncook3.png';
+import w_moncook4 from './w_moncook4.png';
+import w_moncook5 from './w_moncook5.png';
+
+import w_punthai1 from './w_punthai1.png';
+import w_punthai2 from './w_punthai2.png';
+import w_punthai3 from './w_punthai3.png';
+import w_punthai4 from './w_punthai4.png';
+
+import w_sabai1 from './w_sabai1.png';
+import w_sabai2 from './w_sabai2.png';
+import w_sabai3 from './w_sabai3.png';
+import w_sabai4 from './w_sabai4.png';
+import w_sabai5 from './w_sabai5.png';
+import w_sabai6 from './w_sabai6.png';
+import w_sabai7 from './w_sabai7.png';
+import w_sabai8 from './w_sabai8.png';
+import w_sabai9 from './w_sabai9.png';
+
+import w_satop1 from './w_satop1.png';
+import w_satop2 from './w_satop2.png';
+import w_satop3 from './w_satop3.png';
+import w_satop4 from './w_satop4.png';
+import w_satop5 from './w_satop5.png';
+import w_satop6 from './w_satop6.png';
 
 // desing
 
@@ -96,6 +126,8 @@ export {
     muffyLogo,
     heroImg,
     heroDesignImg,
+    heroWeb,
+
     g1,
     g2,
     g3,
@@ -112,6 +144,32 @@ export {
     g14,
     g15,
     web1,
+
+    w_moncook1,
+    w_moncook2,
+    w_moncook3,
+    w_moncook4,
+    w_moncook5,
+    w_punthai1,
+    w_punthai2,
+    w_punthai3,
+    w_punthai4,
+    w_sabai1,
+    w_sabai2,
+    w_sabai3,
+    w_sabai4,
+    w_sabai5,
+    w_sabai6,
+    w_sabai7,
+    w_sabai8,
+    w_sabai9,
+    w_satop1,
+    w_satop2,
+    w_satop3,
+    w_satop4,
+    w_satop5,
+    w_satop6,
+
     card1,
     card2,
     card3,

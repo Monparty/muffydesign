@@ -28,7 +28,7 @@ export default function Page() {
         <div className='px-5 2xl:container 2xl:mx-auto'>
             <div className='flex flex-col lg:flex-row justify-center items-center gap-10 bg-gradient-to-r from-red-300 from-10% via-red-400 via-30% to-red-700 to-90% h-full p-5 w-full rounded-b-xl'>
                 <div className='hidden lg:flex justify-end w-1/2' data-aos="fade-down">
-                    <Image src={heroDesignImg} className='w-4/5 h-4/5' alt='x'></Image>
+                    <Image src={heroDesignImg} className='w-full h-80 object-contain object-right' alt='x'></Image>
                 </div>
                 <div className='text-white flex flex-col gap-4 justify-start w-full lg:w-1/2' data-aos="fade-down">
                     <h1 className="text-2xl lg:text-6xl">
@@ -60,7 +60,7 @@ export default function Page() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3 w-full">
                     {Object.values(designProducts).map(designProduct => (
                         <div className={`${filterType === designProduct.title || filterType === '-' ? '' : 'hidden'}`}>
-                            <CardProductPage key={designProduct.id} {...designProduct} filterDisplay={filterDisplay} filterType={filterType} setFilterType={setFilterType} />
+                            <CardProductPage key={designProduct.id} {...designProduct} filterDisplay={filterDisplay} filterType={filterType} setFilterType={setFilterType} path={'design'} />
                         </div>
                     ))}
                 </div>

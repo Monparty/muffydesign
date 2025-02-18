@@ -93,7 +93,7 @@ export default function Page() {
                         <div className='flex gap-10 items-start justify-center gap-10rounded-xl w-fit lg:w-full' data-aos="fade-up">
                             <CardWebPackage 
                             title={webPackage[0].title} 
-                            link={'#'}
+                            link={'/web/1'}
                             period={webPackage[0].period}
                             price={webPackage[0].price}
                             services={webPackage[0].services}
@@ -101,7 +101,7 @@ export default function Page() {
                             />
                             <CardWebPackage 
                             title={webPackage[1].title} 
-                            link={'#'}
+                            link={'/web/2'}
                             period={webPackage[1].period}
                             price={webPackage[1].price}
                             services={webPackage[1].services}
@@ -110,7 +110,7 @@ export default function Page() {
                             />
                             <CardWebPackage 
                             title={webPackage[2].title} 
-                            link={'#'}
+                            link={'/web/3'}
                             period={webPackage[2].period}
                             price={webPackage[2].price}
                             services={webPackage[2].services}
